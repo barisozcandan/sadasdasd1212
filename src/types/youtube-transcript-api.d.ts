@@ -1,11 +1,11 @@
-declare module 'youtube-transcript-api' {
+declare module 'youtube-transcript' {
   interface TranscriptItem {
     text: string;
     duration: number;
     offset: number;
   }
 
-  export default {
-    fetchTranscript(videoId: string): Promise<TranscriptItem[]>;
-  };
+  export class YoutubeTranscript {
+    static fetchTranscript(videoId: string): Promise<TranscriptItem[]>;
+  }
 } 
